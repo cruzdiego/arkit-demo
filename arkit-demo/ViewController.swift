@@ -24,7 +24,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.showsStatistics = true
         
         // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        let scene = SCNScene(named: "art.scnassets/empty.scn")!
         
         // Set the scene to the view
         sceneView.scene = scene
@@ -52,6 +52,28 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Release any cached data, images, etc that aren't in use.
     }
 
+    //MARK: - Public methods
+    @IBAction func takeAndPlacePicture(sender: Any) {
+        //Validating the framework and camera is working
+        guard let currentFrame = sceneView.session.currentFrame else {
+            return
+        }
+        
+        //1. Taking a picture
+        let imagePlane = SCNPlane(width: sceneView.bounds.width / 6000, height: sceneView.bounds.height / 6000)
+        imagePlane.firstMaterial?.diffuse.contents = sceneView.snapshot()
+        imagePlane.firstMaterial?.lightingModel = .constant
+        
+        //2. Placing it on the screen (by default it's 0,0,0 )
+        let planeNode = SCNNode(geometry: imagePlane)
+        sceneView.scene.rootNode.addChildNode(planeNode)
+        
+        //2.5 Moving it to the camera's position
+        var translation = matrix_identity_float4x4
+        translation.columns.3.z = -0.1
+        planeNode.simdTransform = matrix_multiply(currentFrame.camera.transform, translation)
+    }
+    
     // MARK: - ARSCNViewDelegate
     
 /*
