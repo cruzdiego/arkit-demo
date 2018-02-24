@@ -10,11 +10,11 @@ The goal is making an app that takes pictures and hangs them in the place where 
 
 Let's first open Xcode and create a new project based on the **Augmented Reality App** template. This template does the heavy lifting of setting up everything you need to get you started right away.
 
-![](https://raw.githubusercontent.com/cruzdiego/arkit-demo/raw/master/arkit-demo-step1.png)
+![](https://raw.githubusercontent.com/cruzdiego/arkit-demo/master/arkit-demo-step1.png)
 
 Make sure to select **SceneKit** as *content technology* (the engine ARKit uses for rendering stuff. SceneKit is for 3D, SpriteKit for 2D and Metal is Apple's OpenGL equivalent)
 
-![](https://raw.githubusercontent.com/cruzdiego/arkit-demo/raw/master/arkit-demo-step2.png)
+![](https://raw.githubusercontent.com/cruzdiego/arkit-demo/master/arkit-demo-step2.png)
 
 Now press the Play button and run the project on your device. You've just made an awesome AR ship app without even coding anything!
 
@@ -57,16 +57,16 @@ We need to run that code every time we tap the screen. So now we need:
 
 On **Main.storyboard** find a *UITapGestureRecognizer* on the bottom right of the screen, and drag it to the screen's top bar.
 
-![](https://raw.githubusercontent.com/cruzdiego/arkit-demo/raw/master/arkit-demo-step3.png)
+![](https://raw.githubusercontent.com/cruzdiego/arkit-demo/master/arkit-demo-step3.png)
 
 Select it and drag *Sent actions* to the top bar's first icon (which represents **ViewController.swift**). Select **takeAndPlacePicture** from the popup list. This means our function will run every time our *UITapGestureRecognizer* recognizes a tap.
 
-![](https://raw.githubusercontent.com/cruzdiego/arkit-demo/raw/master/arkit-demo-step4.png)
-![](https://raw.githubusercontent.com/cruzdiego/arkit-demo/raw/master/arkit-demo-step5.png)
+![](https://raw.githubusercontent.com/cruzdiego/arkit-demo/master/arkit-demo-step4.png)
+![](https://raw.githubusercontent.com/cruzdiego/arkit-demo/master/arkit-demo-step5.png)
 
 Last step is telling the *UITapGestureRecognizer* where it needs to recognize taps on (since you could have many different views on your screen). Select the big blue view on top of your screen and *gestureRecognizers* from the right sidebar to our *UITapGestureRecognizer*'s icon on the screen top bar.
 
-![](https://raw.githubusercontent.com/cruzdiego/arkit-demo/raw/master/arkit-demo-step6.png)
+![](https://raw.githubusercontent.com/cruzdiego/arkit-demo/master/arkit-demo-step6.png)
 
 ## And that's it!
 
@@ -98,10 +98,10 @@ Run again and the snapshots should appear at a more convenient distance from you
 ## More resources
 
 You can check out the complete project on my Github page:
-[https://github.com/cruzdiego/arkit-demo]
+https://github.com/cruzdiego/arkit-demo
 
 This tutorial has been heavily based from Apple's own video session on ARKit:
-[https://developer.apple.com/videos/play/wwdc2017/602/]
+https://developer.apple.com/videos/play/wwdc2017/602/
 
 For more videos like that and even more examples and documentation, make sure to visit Apple's website:
-[https://developer.apple.com/arkit/]
+https://developer.apple.com/arkit/
