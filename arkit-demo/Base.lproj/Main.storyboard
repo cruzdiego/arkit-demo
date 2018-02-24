@@ -16,20 +16,13 @@
                     <arscnView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="BrB-h1-WRS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="Dn9-Zh-Jhf" appends="YES" id="aV7-Aa-7fj"/>
-                        </connections>
                     </arscnView>
                     <connections>
                         <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Dn9-Zh-Jhf">
-                    <connections>
-                        <action selector="takeAndPlacePictureWithSender:" destination="BV1-FR-VrT" id="vi6-Zt-3OT"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Dn9-Zh-Jhf"/>
             </objects>
             <point key="canvasLocation" x="-47" y="110"/>
         </scene>
