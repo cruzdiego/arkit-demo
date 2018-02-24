@@ -62,10 +62,11 @@ On **Main.storyboard** find a *UITapGestureRecognizer* on the bottom right of th
 Select it and drag *Sent actions* to the top bar's first icon (which represents **ViewController.swift**). Select **takeAndPlacePicture** from the popup list. This means our function will run every time our *UITapGestureRecognizer* recognizes a tap.
 
 ![](https://raw.githubusercontent.com/cruzdiego/arkit-demo/master/arkit-demo-step4.png)
-![](https://raw.githubusercontent.com/cruzdiego/arkit-demo/master/arkit-demo-step5.png)
+![](https://raw.githubusercontent.com/cruzdiego/arkit-demo/master/arkit-demo-step7.png)
 
 Last step is telling the *UITapGestureRecognizer* where it needs to recognize taps on (since you could have many different views on your screen). Select the big blue view on top of your screen and *gestureRecognizers* from the right sidebar to our *UITapGestureRecognizer*'s icon on the screen top bar.
 
+![](https://raw.githubusercontent.com/cruzdiego/arkit-demo/master/arkit-demo-step8.png)
 
 ## And that's it!
 
