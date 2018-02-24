@@ -66,7 +66,6 @@ Select it and drag *Sent actions* to the top bar's first icon (which represents 
 
 Last step is telling the *UITapGestureRecognizer* where it needs to recognize taps on (since you could have many different views on your screen). Select the big blue view on top of your screen and *gestureRecognizers* from the right sidebar to our *UITapGestureRecognizer*'s icon on the screen top bar.
 
-![](https://raw.githubusercontent.com/cruzdiego/arkit-demo/master/arkit-demo-step6.png)
 
 ## And that's it!
 
